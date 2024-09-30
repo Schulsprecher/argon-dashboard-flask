@@ -98,6 +98,13 @@ $ # Set up the DEBUG environment
 $ # (Unix/Mac) export FLASK_ENV=development
 $ # (Windows) set FLASK_ENV=development
 $ # (Powershell) $env:FLASK_ENV = "development"
+$ #NEU 2024
+$ #After installation and setup of FLASK_APP environment
+$ #Bash
+$ flask db init
+$ flask db migrate -m "Initial migration."
+$ flask db upgrade
+$ flask run
 $
 $ # Start the application (development mode)
 $ # --host=0.0.0.0 - expose the app on all network interfaces (default 127.0.0.1)
