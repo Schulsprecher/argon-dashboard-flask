@@ -17604,4 +17604,22 @@ input.datetimepicker[data-color="yellow"] + .bootstrap-datetimepicker-widget {
 .bootstrap-datetimepicker-widget.dropdown-black table td .btn[data-action="togglePeriod"] {
   background: transparent; }
 
+
+.nav-submenu {
+    display: none; /* Initially hide submenus */
+}
+
+.nav-submenu.collapse {
+    display: block; /* Show when expanded */
+}
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.collapse.show + .arrow {
+  transform: rotate(90deg); /* Rotate arrow when expanded */
+}
+
 /*# sourceMappingURL=argon.css.map */

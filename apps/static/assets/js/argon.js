@@ -1086,3 +1086,30 @@ var Scrollbar = (function() {
 	}
 
 })();
+
+document.addEventListener('DOMContentLoaded', function () {
+    var sitesToggle = document.getElementById('sitesToggle');
+    var sitesSubmenu = document.getElementById('sitesSubmenu');
+
+    sitesToggle.addEventListener('click', function () {
+        sitesSubmenu.classList.toggle('collapse');
+    });
+});
+
+$(document).ready(function() {
+    // Initially hide all submenus
+    $('#sitesSubmenu, #mwzSubmenu').collapse('hide');
+
+    // Toggle Sites submenu
+    $('#sitesToggle').on('click', function(e) {
+        e.preventDefault();
+        $('#sitesSubmenu').collapse('toggle');
+    });
+
+    // Toggle MWZ submenu
+    $('[data-toggle="collapse"]').on('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        var target = $(this).data('target'); // Get the target from data attribute
+        $(target).collapse('toggle'); // Toggle the collapse
+    });
+});
